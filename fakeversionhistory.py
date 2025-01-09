@@ -44,17 +44,10 @@ def append_text_to_doc(doc_path, paragraphs):
                 return
 
             # Wait for 60 seconds before appending the next chunk
-            wait_time = 15
+            wait_time = random.randint(120, 300)
             print(f"Waiting for {wait_time} seconds before the next append...")
             time.sleep(wait_time)
 
     print("Text appending completed.")
-
-# Example usage
-# document_path = "/mnt/c/Users/mjfie/OneDrive/Documents/FakeVersionHistory/Test3.docx"  # Path to the Word document
-# input_text = [
-#     "Beyond its effects on performance, creatine indirectly promotes muscle hypertrophy by enabling users to lift heavier weights and complete more repetitions. Additionally, creatine draws water into muscle cells, increasing cell volume. This process, called cell volumization, may signal anabolic pathways and contribute to muscle growth over time. Moreover, creatine’s ability to reduce muscle damage and inflammation following intense workouts can significantly speed up recovery. It also helps replenish phosphocreatine stores more quickly post-exercise, preparing the body for subsequent sessions. While its primary benefits are seen in physical performance, creatine also supports cognitive function. Research suggests that it may improve mental clarity and reduce fatigue, especially during tasks requiring high focus or problem-solving.",
-#     "One of the most compelling reasons for people who work out to use creatine is its proven safety and efficacy. Creatine monohydrate is one of the safest and most scientifically validated supplements available. Decades of research have confirmed its effectiveness in improving strength, muscle mass, and performance, with minimal risks when used as directed. Its benefits are not limited to elite athletes; creatine can enhance the performance of recreational gym-goers and those new to fitness. By enabling users to train harder and recover faster, it serves as a versatile supplement that aligns with a wide range of fitness goals."
-# ]
 
 append_text_to_doc(document_path, input_text)
